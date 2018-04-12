@@ -144,7 +144,7 @@ class Search extends React.Component {
             this.placesSearch()
         })
         .catch(e => {
-            console.log(e);                                                                                                               // If there's an error, set this.state.error to true, so the "Coming soon..." message appears
+            this.setState({error: true});                                                                                                               // If there's an error, set this.state.error to true, so the "Coming soon..." message appears
         })
     }
 
