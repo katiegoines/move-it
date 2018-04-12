@@ -1,7 +1,7 @@
 {
   "name": "move-it",
   "version": "1.0.0",
-  "description": "",
+  "description": "search app",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -16,7 +16,7 @@
   "bugs": {
     "url": "https://github.com/katiegoines/move-it/issues"
   },
-  "homepage": "https://github.com/katiegoines/move-it#readme",
+  "homepage": "https://gomoveit.herokuapp.com",
   "dependencies": {
     "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.18.2",
