@@ -65,7 +65,9 @@ apiRoutes.route('/walkscore')
         httpClient.get(apiUrl, (err, response, body) => {
             var results = JSON.parse(response.body)
             res.json(results)
-        })
+        }).catch(e => {
+            console.log(e);
+        });
     })
 
 apiRoutes.route('/reversegeo')
@@ -73,7 +75,7 @@ apiRoutes.route('/reversegeo')
         var apiUrl = `https://maps.googleapis.com/maps/api/geocode/json?latlng=${req.query.lat},${req.query.lon}&sensor=false`
         httpClient.get(apiUrl, (err, response, body) => {
             var results = JSON.parse(response.body)
-            // console.log(results.results[0].address_components)
+            console.log(results.results[0].address_components)
             var ac2 = results.results[0].address_components[2].long_name
             var ac3 = results.results[0].address_components[3].short_name
             var ac4 = results.results[0].address_components[4].short_name
@@ -83,7 +85,9 @@ apiRoutes.route('/reversegeo')
                 var ac5 = ""
             }
             res.json(`${ac2}, ${ac3}, ${ac4}, ${ac5}`)
-        })
+        }).catch(e => {
+            console.log(e);
+        });
     })
 
 apiRoutes.route('/places')
@@ -98,7 +102,9 @@ apiRoutes.route('/places')
                 res.json({apiKey: googleID})
             }
             
-        })
+        }).catch(e => {
+            console.log(e);
+        });
     })
 
 
