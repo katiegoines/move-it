@@ -144,7 +144,7 @@ class Search extends React.Component {
             this.placesSearch()
         })
         .catch(e => {
-            this.setState({error: true});                                                                                                               // If there's an error, set this.state.error to true, so the "Coming soon..." message appears
+            console.log(e);                                                                                                               // If there's an error, set this.state.error to true, so the "Coming soon..." message appears
         })
     }
 
@@ -166,7 +166,7 @@ class Search extends React.Component {
             })
         })
         .catch(e => {
-            this.setState({error: true});                                                                                                               // If there's an error, set this.state.error to true, so the "Coming soon..." message appears
+            console.log(e);                                                                                                               // If there's an error, set this.state.error to true, so the "Coming soon..." message appears
         })
     }
 
@@ -180,7 +180,7 @@ class Search extends React.Component {
             // this.placesSearch()
         })
         .catch(e => {
-            this.setState({error: true});                                                                                                               // If there's an error, set this.state.error to true, so the "Coming soon..." message appears
+            console.log(e);                                                                                                               // If there's an error, set this.state.error to true, so the "Coming soon..." message appears
         })
     }
 
@@ -252,7 +252,7 @@ class Search extends React.Component {
             this.setState({ready: true})                                                                                                                // And set the ready to true so that the results populate on the page
         })
         .catch(e => {
-            this.setState({error: true});                                                                                                               // If there's an error, set this.state.error to true, so the "Coming soon..." message appears
+            console.log(e);                                                                                                               // If there's an error, set this.state.error to true, so the "Coming soon..." message appears
         })
     }
 
