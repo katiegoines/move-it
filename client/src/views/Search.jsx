@@ -143,6 +143,9 @@ class Search extends React.Component {
             this.reverseGeo()
             this.placesSearch()
         })
+        .catch(e => {
+            this.setState({error: true});                                                                                                               // If there's an error, set this.state.error to true, so the "Coming soon..." message appears
+        })
     }
 
     // Get the WalkScore using query typed in search field, longitude/latituded provided from Google Geocode
@@ -162,6 +165,9 @@ class Search extends React.Component {
                 }
             })
         })
+        .catch(e => {
+            this.setState({error: true});                                                                                                               // If there's an error, set this.state.error to true, so the "Coming soon..." message appears
+        })
     }
 
     // Get location name using longitude/latitude provided from Google Geocode
@@ -172,6 +178,9 @@ class Search extends React.Component {
         .then((res) => {
             this.setState({town: res.data})
             // this.placesSearch()
+        })
+        .catch(e => {
+            this.setState({error: true});                                                                                                               // If there's an error, set this.state.error to true, so the "Coming soon..." message appears
         })
     }
 
@@ -241,6 +250,9 @@ class Search extends React.Component {
         .then(() => {                                                                                       
             this.setState({loading: false})                                                                                                             // Then set the loading to false so that the "Exploring..." message goes away
             this.setState({ready: true})                                                                                                                // And set the ready to true so that the results populate on the page
+        })
+        .catch(e => {
+            this.setState({error: true});                                                                                                               // If there's an error, set this.state.error to true, so the "Coming soon..." message appears
         })
     }
 
